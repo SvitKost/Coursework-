@@ -1,0 +1,12 @@
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Form1.resources
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Properties.Resources.resources
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\bin\Debug\Nonogram.exe
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\bin\Debug\Nonogram.pdb
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.exe
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.pdb
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.NewName.resources
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Play.resources
+E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Level.resources
