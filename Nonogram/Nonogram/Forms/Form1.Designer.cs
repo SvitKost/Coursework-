@@ -90,6 +90,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Продовжити";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.MouseHover += new System.EventHandler(this.button3_MouseHover);
             // 
             // button_output
@@ -137,8 +138,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(250, 63);
             this.button6.TabIndex = 7;
-            this.button6.Text = "Налаштування";
+            this.button6.Text = "Допомога";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
             // 
             // pictureBox1
@@ -169,7 +171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Nonogram.Properties.Resources.abstraction2;
-            this.ClientSize = new System.Drawing.Size(1245, 704);
+            this.ClientSize = new System.Drawing.Size(1000, 604);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button6);
@@ -186,9 +188,10 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nonogram";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseHover += new System.EventHandler(this.Form1_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

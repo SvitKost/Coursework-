@@ -16,6 +16,7 @@ namespace Nonogram
         public NewName()
         {
             InitializeComponent();
+            textBox1.Select();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -23,16 +24,37 @@ namespace Nonogram
 
         }
 
+        private void Input()
+        {
+            if (textBox1.Text != "")
+            {
+                name = Convert.ToString(textBox1.Text);
+                Plays pl = new Plays();
+                Form1 fr = new Form1();
+                pl.Playss();
+                pl.Input(name);
+            }
+        }
         private void button_Save_Click(object sender, EventArgs e)
         {
-            name = Convert.ToString(textBox1.Text);
-            Plays pl = new Plays();
-            pl.Playss();
-            pl.Input(name);
-            Form1 fr = new Form1();
-            for (int i = 0; i < pl.nomber; i++)
-                fr.list_plays.Items.Add(pl.plays[pl.nomber-1]);
-            Close();
+            Input();                               
+            Close();           
+           
+        }
+
+        private void NewName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                Input();
+                Close();
+            }
+
         }
 
        

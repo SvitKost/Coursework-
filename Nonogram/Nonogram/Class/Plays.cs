@@ -40,6 +40,7 @@ namespace Nonogram
             
             using (StreamWriter filee = new StreamWriter("players.txt"))
             {
+                filee.WriteLine(nomber);
                 for (int j = 0; j < nomber; j++)
                     filee.WriteLine(plays[j]);      
                 filee.WriteLine();

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-
-
+using System.Threading;
 
 namespace Nonogram
 {
@@ -10,6 +9,7 @@ namespace Nonogram
     {
         int m, n, q;        
         static int i, j;
+        string st;
         static Button[ , ] Buttons;
         static int BTWidHe = 40;        
         public int IndexI, IndexJ;
@@ -18,12 +18,12 @@ namespace Nonogram
        
         public Play(string str)
         {
-            InitializeComponent();
+            InitializeComponent();            
             Matrix Mn = new Matrix();
-            Mn.Tabl(str);     
-            
+            Mn.Tabl(str);                 
             m = Mn.m;
             n = Mn.n;
+            st = str;            
             q=Mn.Perev(n, m);
             Mat = new bool[m,n];
             Buttons = new Button[m,n];
@@ -31,7 +31,9 @@ namespace Nonogram
             LabelsV = new Label[n, m];
             this.CenterToScreen();
             int Y = this.ClientRectangle.Height / 2 - (BTWidHe * m) / 2;
-            int X = this.ClientRectangle.Width / 2 - (BTWidHe * n) / 2;
+            int X = this.ClientRectangle.Width / 2 - (BTWidHe * n) / 2;            
+            label1.Location = new Point(X - 100, Y - 20);
+            label1.Text = m + "x" + n;
             for (IndexI = 0; IndexI < m; IndexI++)
             {  
 
@@ -139,41 +141,61 @@ namespace Nonogram
         {            
             Button BT;
             BT = (Button)sender;
-            string st=BT.Name;
-            label1.Visible = false;           
+            string st=BT.Name;   
+                 
             i = st.IndexOf("_");            
             int l = Convert.ToInt16(st.Substring(0, i));
             int w = Convert.ToInt16(st.Substring(i+1, st.Length-(i+1)));
             if (Mat[l, w] == true)
+            {
                 BT.BackColor = System.Drawing.SystemColors.ActiveCaption;
+                
+            }
             else
             {
-                 BT.Image = global::Nonogram.Properties.Resources.x;
-                Console.Beep();                              
+                BT.Image = global::Nonogram.Properties.Resources.x;
+                Console.Beep();
             }
 
+            End();
+            
+
+        }
+
+        private void End()
+        {
             if (q == Pe())
             {
+                System.Media.SoundPlayer sp = new System.Media.SoundPlayer(@"melod.wav");
+                sp.Play();
+                Thread.Sleep(5000);
                 MessageBox.Show("Ви успішно розвязали кросворд");
+                RecordRez rec = new RecordRez();
+                rec.Read(st);
+                if (rec.zawd < 3)
+                    rec.ReadEnd(st,rec.level,rec.zawd+1);
+                else if (rec.zawd==3)
+                    rec.ReadEnd(st, rec.level+1, 1);                
+                Level form = new Level(st,1);
+                form.Show();
                 Close();
             }
-
-        }      
-
-    
+        }
         
 
 
         private void Play_Load(object sender, EventArgs e)
         {
-
-        }       
-
-        
+            
+        }               
 
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        
+
+        
     }
 }

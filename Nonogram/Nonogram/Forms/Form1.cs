@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Nonogram
 {
@@ -7,22 +8,21 @@ namespace Nonogram
     {
         public Form1()
         {
-            InitializeComponent();
-            Players();
+            InitializeComponent();           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
-
         }
 
         public void Players()
         {
             Plays pl = new Plays();
             pl.Playss();
+            list_plays.Items.Clear();
             for (int i = 0; i < pl.nomber; i++)
-                list_plays.Items.Add(pl.plays[i]);
+                list_plays.Items.Add(pl.plays[i]);           
  
         }       
       
@@ -36,15 +36,24 @@ namespace Nonogram
         private void button_input_Click(object sender, EventArgs e)
         {
             NewName form = new NewName();
-            form.Show();
+            form.Show();           
         }
 
        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Level form = new Level();
-            form.Show();
+            
+            if (list_plays.SelectedItem == null)
+                MessageBox.Show("Виберіть гравця");
+            else
+            {
+                string s = list_plays.SelectedItems[0].ToString()+".txt";
+                if (File.Exists(s))
+                    MessageBox.Show("Ви впевнені що хочете розпочати гру знову?");
+                Level form = new Level(s,0);
+                form.Show();
+            }
         }
 
         private void button_output_Click(object sender, EventArgs e)
@@ -93,7 +102,7 @@ namespace Nonogram
         private void button6_MouseHover(object sender, EventArgs e)
         {
             label1.Visible = true;
-            label1.Text = "ще не придумала";
+            label1.Text = "Тут ви можете прочитати правила гри";
         }
 
         private void button3_MouseHover(object sender, EventArgs e)
@@ -106,6 +115,33 @@ namespace Nonogram
         {
             label1.Visible = true;
             label1.Text = "Розпочати нову гру";
+        }
+
+        
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            Players();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            if (list_plays.SelectedItem == null)
+                MessageBox.Show("Виберіть гравця");
+            else
+            {
+                string s = list_plays.SelectedItems[0].ToString() + ".txt";
+                if (File.Exists(s))
+                   i=1;
+                Level form = new Level(s,i);
+                form.Show();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
 
         

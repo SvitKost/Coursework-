@@ -46,12 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\RecordRez.cs" />
     <Compile Include="Class\Matrix.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\NewName.cs">
       <SubType>Form</SubType>
@@ -76,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewName.resx">
       <DependentUpon>NewName.cs</DependentUpon>
@@ -111,6 +121,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\X.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003k.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002k.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\033k.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\022k.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

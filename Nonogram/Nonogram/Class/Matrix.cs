@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace Nonogram
 {
@@ -33,7 +35,19 @@ namespace Nonogram
                     }
                 }
                 file.Close();
+              /*  BinaryFormatter formatter = new BinaryFormatter();
+                FileStream inputStream = File.OpenRead("");
+                T[ , ] = 
+                Address[] loadedAddresses = (Address[])formatter.Deserialize(inputStream);
+                inputStream.Close();
+             /*   BinaryFormatter formatter = new BinaryFormatter();
+                FileStream outputStream = File.OpenWrite("1_1.dat");
+                formatter.Serialize(outputStream, m);
+                formatter.Serialize(outputStream, T);
+                outputStream.Close();*/
+                
             }
+
         }
 
         public int Perev(int n, int m)

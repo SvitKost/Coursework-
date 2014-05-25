@@ -10,3 +10,16 @@ E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Non
 E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.NewName.resources
 E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Play.resources
 E:\Світланка\Навчання\2-й курс\Курсова\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Level.resources
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.exe
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.pdb
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\bin\Debug\Nonogram.exe
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\bin\Debug\Nonogram.pdb
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Form1.resources
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.NewName.resources
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Level.resources
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Play.resources
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Properties.Resources.resources
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Forms.Help.resources
