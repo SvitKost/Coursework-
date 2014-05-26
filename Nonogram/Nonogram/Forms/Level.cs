@@ -74,6 +74,7 @@ namespace Nonogram
                     }
                     else if (Za == 1)
                         pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
+                    
                 }
             }
         }
@@ -111,6 +112,7 @@ namespace Nonogram
                     }
                     else if (Za == 1)
                         pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
+                    
                 }
             }
             else Console.Beep();
@@ -134,6 +136,7 @@ namespace Nonogram
                     }
                     else if (Za == 1)
                         pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
+                    
                 }
             }
             else Console.Beep();
@@ -163,7 +166,7 @@ namespace Nonogram
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            if (pictureBox4.Image != global::Nonogram.Properties.Resources._022)
+            if (Za+1<2)
                 Console.Beep();
             else
             {
@@ -190,7 +193,7 @@ namespace Nonogram
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            if (pictureBox6.Image != global::Nonogram.Properties.Resources._033)
+            if (Za+1<3)
                 Console.Beep();
             else   
             if (I == 1)

@@ -173,7 +173,7 @@ namespace Nonogram
                 MessageBox.Show("Ви успішно розвязали кросворд");
                 RecordRez rec = new RecordRez();
                 rec.Read(stt);
-                if (rec.zawd < 1)
+                if (rec.zawd <= 1)
                     rec.ReadEnd(stt,rec.level,rec.zawd+1);
                 else if (rec.zawd==2)
                     rec.ReadEnd(stt, rec.level+1, 0);                
