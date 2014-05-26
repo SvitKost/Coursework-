@@ -14,17 +14,18 @@ namespace Nonogram
     public partial class Level : Form
     {
         public int I,Lev,Za;
-        string s;
+        string s, str;
         public Level(string st, int i)
         {
             InitializeComponent();
             RecordRez fl = new RecordRez();
+            str = st;
             if (i == 0)
-                fl.Stwor(st);
+                fl.Stwor(str);
             else
-                fl.Read(st);
+                fl.Read(str);
             Lev = fl.level;
-            Za = fl.zawd + 1;
+            Za = fl.zawd;
             if (Lev == 1)
             {
                 pictureBox2.Image = global::Nonogram.Properties.Resources._002k;
@@ -44,27 +45,56 @@ namespace Nonogram
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            label2.Text = "";
-            label1.Text = "Ви обрали І рівень";
-            I = 1;
-            if (panel1.Visible == false)
+            if (Lev > 1)
+            { 
+                label2.Text = "";
+                label1.Text = "Ви обрали І рівень";
+                I = 1;
+                if (panel1.Visible == false)
+                {
+                    label2.Text = "";
+                    panel1.Visible = true;
+                    pictureBox4.Image = global::Nonogram.Properties.Resources._022;
+                    pictureBox6.Image = global::Nonogram.Properties.Resources._033;
+                }            
+            }
+            else if (Lev == 1)
             {
                 label2.Text = "";
-                panel1.Visible = true;
-                if (Za == 1)
+                label1.Text = "Ви обрали І рівень";
+                I = 1;
+                if (panel1.Visible == false)
                 {
-                    pictureBox4.Image = global::Nonogram.Properties.Resources._022k;
-                    pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
+                    label2.Text = "";
+                    panel1.Visible = true;
+                    if (Za == 0)
+                    {
+                        pictureBox4.Image = global::Nonogram.Properties.Resources._022k;
+                        pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
+                    }
+                    else if (Za == 1)
+                        pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
                 }
-                else if (Za == 2)
-                    pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
             }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
-            if (Lev>=2)        
+            if (Lev > 2)
+            { 
+                I = 2;
+                label2.Text = "";
+                label1.Text = "Ви обрали ІІ рівень";
+
+                if (panel1.Visible == false)
+                {
+                    label2.Text = "";
+                    panel1.Visible = true;
+                    pictureBox4.Image = global::Nonogram.Properties.Resources._022;
+                    pictureBox6.Image = global::Nonogram.Properties.Resources._033;
+                }
+            }
+            else if (Lev>=2)        
             {
                 I = 2;
                 label2.Text = "";
@@ -74,15 +104,16 @@ namespace Nonogram
                 {                    
                     label2.Text = "";
                     panel1.Visible = true;
-                    if (Za == 1)
+                    if (Za == 0)
                     {
                         pictureBox4.Image = global::Nonogram.Properties.Resources._022k;
                         pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
                     }
-                    else if (Za == 2)
+                    else if (Za == 1)
                         pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
                 }
             }
+            else Console.Beep();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -96,15 +127,16 @@ namespace Nonogram
                 {
                     label2.Text = "";
                     panel1.Visible = true;
-                    if (Za == 1)
+                    if (Za == 0)
                     {
                         pictureBox4.Image = global::Nonogram.Properties.Resources._022k;
                         pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
                     }
-                    else if (Za == 2)
+                    else if (Za == 1)
                         pictureBox6.Image = global::Nonogram.Properties.Resources._033k;
                 }
             }
+            else Console.Beep();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -130,30 +162,37 @@ namespace Nonogram
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
-        {            
-            if (I == 1)
-            {
-                label2.Text = "II завдання";
-                s = "P1_2.txt";
-            }
+        {
+            if (pictureBox4.Image != global::Nonogram.Properties.Resources._022)
+                Console.Beep();
             else
             {
-                if (I == 2)
+                if (I == 1)
                 {
                     label2.Text = "II завдання";
-                    s = "P2_2.txt";
+                    s = "P1_2.txt";
                 }
                 else
                 {
-                    label2.Text = "II завдання";
-                    s = "P3_2.txt";
+                    if (I == 2)
+                    {
+                        label2.Text = "II завдання";
+                        s = "P2_2.txt";
+                    }
+                    else
+                    {
+                        label2.Text = "II завдання";
+                        s = "P3_2.txt";
+                    }
                 }
-            }
-            
+            }   
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
-        {            
+        {
+            if (pictureBox6.Image != global::Nonogram.Properties.Resources._033)
+                Console.Beep();
+            else   
             if (I == 1)
             {
                 label2.Text = "III завдання";
@@ -178,13 +217,23 @@ namespace Nonogram
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (s != "")
+           
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            if (s != null)
             {
-                Play form = new Play(s);
+                Play form = new Play(s, str);
                 form.Show();
                 Close();
             }
             else MessageBox.Show("Виберіть рівень та завдання");
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

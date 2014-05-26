@@ -137,6 +137,45 @@
   <ItemGroup>
     <None Include="Resources\022k.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\033.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\022.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Новая папка\11.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

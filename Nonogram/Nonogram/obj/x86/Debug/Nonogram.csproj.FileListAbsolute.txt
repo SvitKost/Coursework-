@@ -22,4 +22,4 @@ C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nono
 C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Properties.Resources.resources
 C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Forms.Help.resources
+C:\Documents and Settings\User\Мои документы\GitHub\Coursework-\Nonogram\Nonogram\obj\x86\Debug\Nonogram.Help.resources

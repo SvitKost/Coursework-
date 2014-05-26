@@ -9,21 +9,22 @@ namespace Nonogram
     {
         int m, n, q;        
         static int i, j;
-        string st;
+        string st,stt;
         static Button[ , ] Buttons;
         static int BTWidHe = 40;        
         public int IndexI, IndexJ;
         static bool[ , ] Mat;
         static Label[,] LabelsG, LabelsV;
        
-        public Play(string str)
+        public Play(string str,string stg)
         {
             InitializeComponent();            
             Matrix Mn = new Matrix();
             Mn.Tabl(str);                 
             m = Mn.m;
             n = Mn.n;
-            st = str;            
+            st = str;
+            stt = stg;
             q=Mn.Perev(n, m);
             Mat = new bool[m,n];
             Buttons = new Button[m,n];
@@ -171,12 +172,12 @@ namespace Nonogram
                 Thread.Sleep(5000);
                 MessageBox.Show("Ви успішно розвязали кросворд");
                 RecordRez rec = new RecordRez();
-                rec.Read(st);
-                if (rec.zawd < 3)
-                    rec.ReadEnd(st,rec.level,rec.zawd+1);
-                else if (rec.zawd==3)
-                    rec.ReadEnd(st, rec.level+1, 1);                
-                Level form = new Level(st,1);
+                rec.Read(stt);
+                if (rec.zawd < 1)
+                    rec.ReadEnd(stt,rec.level,rec.zawd+1);
+                else if (rec.zawd==2)
+                    rec.ReadEnd(stt, rec.level+1, 0);                
+                Level form = new Level(stt,1);
                 form.Show();
                 Close();
             }
@@ -192,6 +193,20 @@ namespace Nonogram
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+       
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Level form = new Level(stt, 1);
+            form.Show();
+            Close();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Help he = new Help();
+            he.Show();
         }
 
         

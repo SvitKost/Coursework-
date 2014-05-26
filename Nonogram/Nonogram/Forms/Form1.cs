@@ -50,7 +50,7 @@ namespace Nonogram
             {
                 string s = list_plays.SelectedItems[0].ToString()+".txt";
                 if (File.Exists(s))
-                    MessageBox.Show("Ви впевнені що хочете розпочати гру знову?");
+                    MessageBox.Show("Гра буде перезаписана");
                 Level form = new Level(s,0);
                 form.Show();
             }
@@ -141,7 +141,8 @@ namespace Nonogram
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Help hl = new Help();
+            hl.Show();
         }
 
         
